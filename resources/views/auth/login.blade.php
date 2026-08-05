@@ -1,5 +1,10 @@
 @extends('layouts.auth')
 
+@section('title')
+    Log in
+@endsection
+
+
 @section('auth-contents')
 <form class="mt-14 space-y-5" novalidate>
     <div class="flex flex-col gap-2">
@@ -31,7 +36,7 @@
     <input
         type="submit"
         value='Iniciar Sesión'
-        class="bg-purple-950 hover:bg-purple-800 w-full p-3 rounded-lg text-white font-bold  text-xl cursor-pointer"
+        class="bg-[rgb(var(--main-color))] hover:bg-[rgb(var(--main-color-darker))] w-full p-3 rounded-lg text-white font-bold  text-xl cursor-pointer"
     />
 </form>
 @endsection

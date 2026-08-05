@@ -55,7 +55,7 @@
     <input
         type="submit"
         value='Registrarme'
-        class="bg-purple-950 hover:bg-purple-800 w-full p-3 rounded-lg text-white font-bold  text-xl cursor-pointer" />
+        class="bg-[rgb(var(--main-color))] hover:bg-[rgb(var(--main-color-darker))] w-full p-3 rounded-lg text-white font-bold  text-xl cursor-pointer" />
 </form>
 
 @endsection
