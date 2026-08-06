@@ -15,6 +15,7 @@
             placeholder="Name"
             class="w-full border border-gray-300 p-3 rounded-lg"
             name="name"
+            value="{{ old('name') }}"
         />
     </div>
     {{-- NAME ERROR --}}
@@ -32,6 +33,7 @@
             placeholder="Email"
             class="w-full border border-gray-300 p-3 rounded-lg"
             name="email"
+            value="{{ old('email') }}"
         />
     </div>
     {{-- EMAIL ERROR --}}

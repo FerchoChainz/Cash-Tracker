@@ -18,6 +18,7 @@ class SignupRequest extends FormRequest
             'name.required' => 'The name field is required.',
             'name.string' => 'The name must be a string.',
             'email.required' => 'The email field is required.',
+            'email.unique'=> 'The email has already been taken',
             'email.email' => 'The email must be a valid email address.',
             'password.required' => 'The password field is required.',
             'password.confirmed' => 'The password confirmation does not match.',
@@ -38,7 +39,7 @@ class SignupRequest extends FormRequest
     {
         return [
             'name' => ['required','string'],
-            'email' => ['required', 'email'],
+            'email' => ['required', 'email', 'unique:users,email'],
             'password' =>['required', 'confirmed',
             Password::min(4)
             ->letters() // Require at least one letter
