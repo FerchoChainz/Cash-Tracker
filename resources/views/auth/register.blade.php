@@ -7,12 +7,12 @@
 @section('auth-contents')
 <form method="post" action="{{ route('register.store') }}" class="mt-14 space-y-5" novalidate>
     <div class="space-y-2">
-        <label class="font-bold text-2xl block" for="name">Nombre</label>
+        <label class="font-bold text-2xl block" for="name">Name</label>
 
         <input
             id="name"
             type="text"
-            placeholder="Tu Nombre"
+            placeholder="Name"
             class="w-full border border-gray-300 p-3 rounded-lg"
             name="name"
         />
@@ -29,12 +29,11 @@
         <input
             id="email"
             type="email"
-            placeholder="Email de Registro"
+            placeholder="Email"
             class="w-full border border-gray-300 p-3 rounded-lg"
             name="email"
         />
     </div>
-
     {{-- EMAIL ERROR --}}
     @error('email')
         <p class="text-red-600">{{ $message }}</p>
@@ -46,18 +45,23 @@
 
         <input
             type="password"
-            placeholder="Password de Registro"
+            placeholder="Password"
             class="w-full border border-gray-300 p-3 rounded-lg"
             name="password"
         />
     </div>
+    {{-- PASSWORD ERROR --}}
+    @error('password')
+        <p class="text-red-600">{{ $message }}</p>
+    @enderror
+    {{-- PASSWORD ERROR --}}
 
     <div class="space-y-2">
-        <label class="font-bold text-2xl block" for="password_confirmation">Repetir Password</label>
+        <label class="font-bold text-2xl block" for="password_confirmation">Confirm Password</label>
 
         <input
             type="password"
-            placeholder="Password de Registro"
+            placeholder="Confirm Password"
             class="w-full border border-gray-300 p-3 rounded-lg"
             name="password_confirmation"
         />
@@ -65,7 +69,7 @@
 
     <input
         type="submit"
-        value='Registrarme'
+        value='Create Account'
         class="bg-[rgb(var(--main-color))] hover:bg-[rgb(var(--main-color-darker))] w-full p-3 rounded-lg text-white font-bold  text-xl cursor-pointer" />
 </form>
 

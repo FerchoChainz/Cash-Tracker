@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SignupRequest;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -11,20 +12,12 @@ class RegisterController extends Controller
         return view('auth.register');
     }
 
-    public function store(Request $request){
+    public function store(SignupRequest $request){
         // Handle the registration logic here
 
 
         // Second params is for custom error messages
-        $data = $request->validate([
-            'name' => ['required','string'],
-            'email' => ['required', 'email']
-        ], [
-            'name.required' => 'The name field is required.',
-            'name.string' => 'The name must be a string.',
-            'email.required' => 'The email field is required.',
-            'email.email' => 'The email must be a valid email address.',
-        ]);
+        $data = $request->validated();
 
         dd($data);
 
