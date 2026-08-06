@@ -17,6 +17,11 @@
             name="name"
         />
     </div>
+    {{-- NAME ERROR --}}
+    @error('name')
+        <p class="text-red-600">{{ $message }}</p>
+    @enderror
+    {{-- NAME ERROR --}}
 
     <div class="space-y-2">
         <label class="font-bold text-2xl block" for="email">Email</label>
@@ -29,6 +34,12 @@
             name="email"
         />
     </div>
+
+    {{-- EMAIL ERROR --}}
+    @error('email')
+        <p class="text-red-600">{{ $message }}</p>
+    @enderror
+    {{-- EMAIL ERROR --}}
 
     <div class="space-y-2">
         <label class="font-bold text-2xl block">Password</label>
