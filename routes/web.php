@@ -20,3 +20,7 @@ Route::get('/email/verify/{id}/{hash}', function(EmailVerificationRequest $reque
     return redirect('/auth/login');
 
 })->middleware(['auth','signed'])->name('verification.verify');
+
+Route::get('/email/verify', function(){
+    return view('auth.verify-email');
+})->middleware(['auth'])->name('verification.notice');

@@ -31,5 +31,8 @@ class RegisterController extends Controller
         // Auth the user after registration
         Auth::login($user);
 
+        // Redirect to a specific page after successful registration
+        return redirect()->route('verification.notice');
+
     }
 }
