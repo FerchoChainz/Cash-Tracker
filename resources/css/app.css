@@ -3,9 +3,53 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
+@font-face {
+    font-family: 'The Seasons';
+    src: url('/fonts/Fontspring-DEMO-theseasons-lt.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'The Seasons';
+    src: url('/fonts/Fontspring-DEMO-theseasons-ltit.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'The Seasons';
+    src: url('/fonts/Fontspring-DEMO-theseasons-reg.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'The Seasons';
+    src: url('/fonts/Fontspring-DEMO-theseasons-it.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'The Seasons';
+    src: url('/fonts/Fontspring-DEMO-theseasons-bd.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'The Seasons';
+    src: url('/fonts/Fontspring-DEMO-theseasons-bdit.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Satoshi', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-serif: 'The Seasons', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
 
     /* COLORS */
     --main-color: 108,185,136;
