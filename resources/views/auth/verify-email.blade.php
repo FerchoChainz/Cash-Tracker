@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('title')
-    Create Account
+    Verify Email
 @endsection
 
 @section('auth-contents')
