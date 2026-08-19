@@ -9,11 +9,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Auth Routes
+// Register Routes
 Route::get('/auth/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/auth/register', [RegisterController::class, 'store'])->name('register.store');
 
+// Login Routes
 Route::get('/auth/login', [LoginController::class, 'index'])->name('login');
+Route::post('/auth/login', [LoginController::class, 'store'])->name('login.store');
 
+// Email Verification Routes
 Route::get('/email/verify/{id}/{hash}', function(EmailVerificationRequest $request){
     // Fulfill the email verification request
     $request->fulfill();
@@ -25,7 +30,7 @@ Route::get('/email/verify', function(){
     return view('auth.verify-email');
 })->middleware(['auth'])->name('verification.notice');
 
-
+// Resend Verification Email Route
 Route::get('/dashboard', function(){
     return view('dashboard');
 })->middleware(['auth','verified'])->name('dashboard');

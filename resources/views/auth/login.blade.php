@@ -6,7 +6,7 @@
 
 
 @section('auth-contents')
-<form class="mt-14 space-y-5" novalidate>
+<form method="post" class="mt-14 space-y-5" novalidate action="{{ route('login.store') }}">
     <div class="flex flex-col gap-2">
         <label class="font-bold text-2xl" for="email">Email</label>
 
