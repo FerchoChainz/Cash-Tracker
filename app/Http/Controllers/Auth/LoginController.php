@@ -13,6 +13,8 @@ class LoginController extends Controller
     }
 
     public function store(SignInRequest $request){
-        dd('Desde request');
+        $data = $request->validated();
+
+        dd($data);
     }
 }

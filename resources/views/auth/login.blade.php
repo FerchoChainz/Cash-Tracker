@@ -19,6 +19,11 @@
             tabindex="1"
         />
     </div>
+       {{-- EMAIL ERROR --}}
+    @error('email')
+        <p class="text-red-600">{{ $message }}</p>
+    @enderror
+
 
     <div class="flex flex-col gap-2">
         <div class="flex  items-center justify-between">
@@ -33,6 +38,12 @@
             tabindex="2"
         />
     </div>
+    {{-- PASSWORD ERROR --}}
+    @error('password')
+        <p class="text-red-600">{{ $message }}</p>
+    @enderror
+
+
     <input
         type="submit"
         value='Iniciar Sesión'
