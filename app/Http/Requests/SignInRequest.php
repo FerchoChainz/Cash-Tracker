@@ -7,23 +7,22 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class SignInRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
     public function authorize(): bool
     {
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, ValidationRule|array<mixed>|string>
-     */
+    public function messages(): array {
+        return [
+            'email.exists' => 'Email not found. Please check your email or register for an account.'
+        ];
+    }
+
+
     public function rules(): array
     {
         return [
-            'email' => ['required', 'email'],
+            'email' => ['required', 'email','exists:users,email'],
             'password' => ['required']
         ];
     }
