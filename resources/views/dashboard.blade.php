@@ -7,7 +7,7 @@
 @section('auth-contents')
 
     @if (session('success'))
-        <p class="my-10 text-center text-green-500 bg-green-100 py-3">{{ session('success') }}</p>
+        <x-alert type="success" :message="session('success')" />
     @endif
 
 @endsection

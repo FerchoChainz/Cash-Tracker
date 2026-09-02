@@ -8,12 +8,9 @@
 @section('auth-contents')
 
     @if (session('error'))
-        <div class="bg-red-100 border border-red-400 text-red-700 mt-2 px-4 py-3 rounded relative" role="alert">
-            <strong class="font-bold">Error!</strong>
-            <span class="block sm:inline">{{ session('error') }}</span>
-        </div>
-
+        <x-alert type="error" :message="session('error')" />
     @endif
+
     <form method="post" class="mt-14 space-y-5" novalidate action="{{ route('login.store') }}">
         <div class="flex flex-col gap-2">
             <label class="font-bold text-2xl" for="email">Email</label>
