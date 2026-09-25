@@ -19,9 +19,7 @@
         />
     </div>
     {{-- NAME ERROR --}}
-    @error('name')
-        <p class="text-red-600">{{ $message }}</p>
-    @enderror
+    <x-input-error field="name" />
     {{-- NAME ERROR --}}
 
     <div class="space-y-2">
@@ -37,9 +35,7 @@
         />
     </div>
     {{-- EMAIL ERROR --}}
-    @error('email')
-        <p class="text-red-600">{{ $message }}</p>
-    @enderror
+    <x-input-error field="email" />
     {{-- EMAIL ERROR --}}
 
     <div class="space-y-2">
@@ -53,9 +49,7 @@
         />
     </div>
     {{-- PASSWORD ERROR --}}
-    @error('password')
-        <p class="text-red-600">{{ $message }}</p>
-    @enderror
+    <x-input-error field="password" />
     {{-- PASSWORD ERROR --}}
 
     <div class="space-y-2">
