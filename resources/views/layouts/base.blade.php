@@ -10,6 +10,10 @@
     @fonts
 
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -17,8 +21,9 @@
 </head>
 
 
-<body>
+<body class="bg-surface font-sans text-on-surface antialiased min-h-screen">
 
+    @sectionMissing('no-header')
     <header class="bg-black p-5">
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:justify-between">
             <div class="w-full max-w-100">
@@ -42,6 +47,7 @@
             </nav>
         </div>
     </header>
+    @endif
 
 
     @yield('contents')
